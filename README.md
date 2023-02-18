@@ -5,19 +5,19 @@
 
 This is my Bootcamp Mid Project where I created a dashboard about COVID-19.
 
----
+
 ## Table of Content
 
 - [Introduction](#Introduction)
 - [Goals](#Goals)
 - [How To Use It](#How-To-Use-It)
 
----
+
 ## Introduction
 
 TEXT
 
----
+
 ## Goals
 
 ### L1
@@ -36,6 +36,6 @@ TEXT
 - [ ] To be able to update the database via Streamlit (with username and password, in a separate page. The dashboard must make the previous request that adds data via API)
 - [ ] Create Docker container and deploy the services in the cloud (Heroku. The two services must be uploaded separately)
 
----
+
 ## How To Use It
 
