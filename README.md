@@ -3,8 +3,9 @@
 ![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)
 ![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)
 
-This is my Bootcamp Mid Project where I created a dashboard about COVID-19 in Canada.
+![myimagen](/img_readme/cover.jpeg)
 
+This is my Bootcamp Mid Project where I created a dashboard about COVID-19 in Canada.
 
 ## Table of Content
 
