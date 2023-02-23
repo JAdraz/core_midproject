@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from router import endpoints, germany_covid
+from router import germany_covid
 
 app = FastAPI()
 
