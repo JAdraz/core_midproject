@@ -7,15 +7,15 @@ router = APIRouter()
 
 @router.get("/all/germany/cases/")
 def confirmed_cases():
-    res = db["germany_covid_confirmed"].find({})
+    res = db["germany_covid_confirmed"].find({}, {"_id":0})
     return loads(json_util.dumps(res))
 
 @router.get("/all/germany/deaths/")
 def death_cases():
-    res = db["germany_covid_deaths"].find({})
+    res = db["germany_covid_deaths"].find({}, {"_id":0})
     return loads(json_util.dumps(res))
 
 @router.get("/all/germany/recovered/")
 def recovered_cases():
-    res = db["germany_covid_recovered"].find({})
+    res = db["germany_covid_recovered"].find({}, {"_id":0})
     return loads(json_util.dumps(res))
