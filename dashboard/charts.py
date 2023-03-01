@@ -1,4 +1,4 @@
-import pandas as pd
+import streamlit as st
 from datetime import datetime
 import matplotlib.pyplot as plt
 
@@ -10,8 +10,6 @@ def chart1(data):
     dates = [datetime.date(datetime.strptime(date_string, '%m/%d/%y')) for date_string in raw1[3:]]
     cases = [int(n) for n in raw2[3:]]
 
-    df = pd.DataFrame([dates, cases]).T
-    df.columns = ["Date", "Cases"]
-
-    return plt.plot(df['Date'], df['Cases']), plt.xlabel('Dates'), plt.ylabel('Confirmed Cases'), plt.grid('minor'), plt.show()
-    
+    return st.plotly_chart(cases, dates)
+    # plt.plot(dates, cases), plt.xlabel('Dates'), plt.ylabel('Confirmed Cases'), plt.yticks([1_000_000, 2_000_000, 3_000_000, 4_000_000], ["1M", "2M", "3M", "4M"]), plt.grid("minor")
+    # return plt.show()
