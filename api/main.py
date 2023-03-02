@@ -1,9 +1,9 @@
 from fastapi import FastAPI
-from router import germany_covid
+from router import endpoints
 
 app = FastAPI()
 
-app.include_router(germany_covid.router)
+app.include_router(endpoints.router)
 
 @app.get("/")
 def test():

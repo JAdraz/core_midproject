@@ -5,19 +5,23 @@ from json import loads
 
 router = APIRouter()
 
-@router.get("/{country}/cases/")
+@router.get("/confirmed/{country}")
 def confirmed_cases(country:str):
-    filt = {"Country/Region"}
-    project = 
-    res = db["germany_covid_confirmed"].find({}, {"_id":0})
+    filt = {"Country/Region":country}
+    project = {"_id":0, "Country/Region":0, "Lat":0, "Long":0}
+    res = db["confirmed_cases"].find(filt, project)
     return loads(json_util.dumps(res))
 
-@router.get("/germany/deaths/")
-def death_cases():
-    res = db["germany_covid_deaths"].find({}, {"_id":0})
+@router.get("/deaths/{country}")
+def death_cases(country:str):
+    filt = {"Country/Region":country}
+    project = {"_id":0, "Country/Region":0, "Lat":0, "Long":0}
+    res = db["death_cases"].find(filt, project)
     return loads(json_util.dumps(res))
 
-@router.get("/all/germany/recovered/")
-def recovered_cases():
+@router.get("/recovered/{country}")
+def recovered_cases(country:str):
+    filt = {"Country/Region":country}
+    project = {"_id":0, "Country/Region":0, "Lat":0, "Long":0}
     res = db["germany_covid_recovered"].find({}, {"_id":0})
     return loads(json_util.dumps(res))
