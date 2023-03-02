@@ -16,12 +16,12 @@ def confirmed_cases(country:str):
 def death_cases(country:str):
     filt = {"Country/Region":country}
     project = {"_id":0, "Country/Region":0, "Lat":0, "Long":0}
-    res = db["death_cases"].find(filt, project)
+    res = db["deaths_cases"].find(filt, project)
     return loads(json_util.dumps(res))
 
 @router.get("/recovered/{country}")
 def recovered_cases(country:str):
     filt = {"Country/Region":country}
     project = {"_id":0, "Country/Region":0, "Lat":0, "Long":0}
-    res = db["germany_covid_recovered"].find({}, {"_id":0})
+    res = db["recovered_cases"].find(filt, project)
     return loads(json_util.dumps(res))
