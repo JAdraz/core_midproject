@@ -1,10 +1,15 @@
 import streamlit as st
-from gets import get_cases, get_deaths, get_recovered
-from charts import chart1
-import matplotlib.pyplot as plt
+from datetime import datetime
+import requests
+
+st.set_page_config(page_title="Germany COVID-19 Dashboard", layout="wide")
 
 # Header
-st.title("COVID-19 Dashboard")
+st.title("Germany COVID-19 Dashboard")
+st.write("By Jesus Adraz")
+
+# Sidebar
+db_selected = st.selectbox("What do you want to show?", ["Confirmed Cases", "Deaths", "Recovered"])
 
 data = get_cases()
 st.text(data[0])

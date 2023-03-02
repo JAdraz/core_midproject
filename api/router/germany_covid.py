@@ -5,12 +5,14 @@ from json import loads
 
 router = APIRouter()
 
-@router.get("/all/germany/cases/")
-def confirmed_cases():
+@router.get("/{country}/cases/")
+def confirmed_cases(country:str):
+    filt = {"Country/Region"}
+    project = 
     res = db["germany_covid_confirmed"].find({}, {"_id":0})
     return loads(json_util.dumps(res))
 
-@router.get("/all/germany/deaths/")
+@router.get("/germany/deaths/")
 def death_cases():
     res = db["germany_covid_deaths"].find({}, {"_id":0})
     return loads(json_util.dumps(res))
