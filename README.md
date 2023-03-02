@@ -1,9 +1,9 @@
-# Germany COVID-19 Dashboard 2023
+# COVID-19 Dashboard
 
 ![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)
 ![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)
 
-![myimagen](/img/cover.png)
+![myimagen](/img/cover.jpeg)
 
 ## Table of Content
 
@@ -18,7 +18,7 @@
 
 ## Introduction
 
-This is my Bootcamp Mid Project where I created a dashboard about COVID-19 in Germany. It is my first real project since I jumped into data analytics field. You are going to find how I did it and the goals that was setted at then end of it. I hope you like it 🤟
+This is my Bootcamp Mid Project where I created a dashboard about COVID-19 in Germany and Venezuela. It is my first real project since I jumped into data analytics field. You are going to find how I did it and the goals that was setted at then end of it. I hope you like it 🤟
 
 ## Goals
 
