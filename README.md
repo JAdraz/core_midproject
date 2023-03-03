@@ -24,7 +24,7 @@ This is my Bootcamp Mid Project where I created a dashboard about COVID-19 in Ge
 
 ### L1
 - [X] Create Api in FastApi
-- [ ] Create Dashboard in streamlit
+- [X] Create Dashboard in streamlit
 - [X] Database in **MongoDB** or PostgreSWL
 ### L2
 - [ ] Use of geospatial data and geoqueries in MongoDB or Postgres (Using PostGIS)
