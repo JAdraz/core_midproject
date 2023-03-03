@@ -4,7 +4,7 @@ import requests
 
 def get_confirmed(a:str):
     country = a.capitalize()
-    print(requests.get(url+f"/confirmed/{country}"))
+    return (requests.get(url+f"/confirmed/{country}")).json()
 
 def get_deaths(a:str):
     country = a.capitalize()

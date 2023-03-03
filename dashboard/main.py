@@ -2,15 +2,15 @@ import streamlit as st
 from datetime import datetime
 import requests
 
-st.set_page_config(page_title="Germany COVID-19 Dashboard", layout="wide")
-
+st.set_page_config(page_title="COVID-19 Dashboard", layout="wide")
+dataset_countries_names = requests.get("http://127.0.0.1:8000/countries").json()
 # Header
-st.title("Germany COVID-19 Dashboard")
+st.title("COVID-19 Dashboard")
 st.write("By Jesus Adraz")
 
+# Body
 # Sidebar
-db_selected = st.selectbox("What do you want to show?", ["Confirmed Cases", "Deaths", "Recovered"])
+st.sidebar.title("Menu")
+countries_name = st.sidebar.multiselect("Select one or more countries", [i["Country/Region"] for i in dataset_countries_names])
 
-data = get_cases()
-st.text(data[0])
-chart1(data[0])
+print(countries_name)

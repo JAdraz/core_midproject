@@ -25,3 +25,12 @@ def recovered_cases(country:str):
     project = {"_id":0, "Country/Region":0, "Lat":0, "Long":0}
     res = db["recovered_cases"].find(filt, project)
     return loads(json_util.dumps(res))
+
+@router.get("/countries")
+def get_countries():
+    filt = {}
+    project = {"Country/Region":1, "_id":0}
+    countries = list(db["confirmed_cases"].find(filt, project))
+    if len(countries) == 0:
+        return {"Error":"Empty data or no data available"}
+    return loads(json_util.dumps(countries))
