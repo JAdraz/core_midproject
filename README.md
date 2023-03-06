@@ -21,6 +21,8 @@
 
 This is my Bootcamp Mid Project where I created a dashboard about COVID-19 in Germany and Venezuela. It is my first real project since I jumped into data analytics field. You are going to find how I did it and the goals that was setted at then end of it. I hope you like it 🤟
 
+[Back to Table of Content](#table-of-content)
+
 ## Goals
 
 ### L1
@@ -39,6 +41,8 @@ This is my Bootcamp Mid Project where I created a dashboard about COVID-19 in Ge
 - [ ] To be able to update the database via Streamlit (with username and password, in a separate page. The dashboard must make the previous request that adds data via API)
 - [ ] Create Docker container and deploy the services in the cloud (Heroku. The two services must be uploaded separately)
 
+[Back to Table of Content](#table-of-content)
+
 ## Data Cleaning
 
 For this project I used this dataset from Kaggle [Time Series Data Covid-19 Global](https://www.kaggle.com/datasets/baguspurnama/covid-confirmed-global). You can find the csv files within data folder: confirmed_global.csv, deaths_global.csv and recovered_global.csv.
@@ -47,20 +51,34 @@ I did some data cleaning to get only cases form Germany and I dropped the Provin
 
 If you want yo explore how I did the data cleaning, check the file within data folder or clicking [here](/data/cleaning_data.ipynb).
 
+[Back to Table of Content](#table-of-content)
+
 ## Database
 
 The datasets cleaned was uploaded to Mongo DB as a CSV file for being processed through the API.
+
+[Back to Table of Content](#table-of-content)
 
 ## API
 
 I created an API with its routers to extract data when it is neccesary.
 
+[Back to Table of Content](#table-of-content)
+
 ## Dashboard
 
 The dashboard was created using [Streamlit](https://streamlit.io) interface.
 
+[Back to Table of Content](#table-of-content)
+
 ## How To Use It
+
+
+
+[Back to Table of Content](#table-of-content)
 
 ## Credits
 
-I have to thanks to my teachers Santino
+I'd like to thanks to my teachers [Santino Lede](https://github.com/Luxor5k) and [Daniel Alvarado](https://github.com/DanielDls-exe) for support me in each step of this project. Also, I want to thanks Nicolas Manduley [repository](https://github.com/nmanduley/midproject), because it helped me to chart my data.
+
+[Back to Top](#covid-19-dashboard)
