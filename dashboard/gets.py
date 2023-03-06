@@ -18,4 +18,4 @@ def get_countries():
     return (requests.get(url+f"/countries")).json()
 
 def get_data(db_name, country):
-    return (requests.get(f"http://127.0.0.1:8000/{db_name}/{country}"))
+    return (requests.get(f"http://127.0.0.1:8000/{db_name}/{country}")).json()

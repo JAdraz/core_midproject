@@ -2,8 +2,9 @@ import requests
 import pandas as pd
 from datetime import datetime
 import plotly.graph_objs as go
+from gets import get_data
 
-AXIS_FONT_SIZE = 20
+AXIS_FONT_SIZE = 15
 FIG_HEIGHT = 400
 FIG_WIDTH = 600
 MIN_DATE = datetime.date(datetime(2020,1,22))
@@ -22,8 +23,8 @@ def get_db_name(database):
 def get_df(data, date_range):
     MIN_DATE = date_range[0]
     MAX_DATE = date_range[1]
-    res = data.json()
-    raw = [list(res[0].keys()), list(res[0].values())]
+    # res = data.json()
+    raw = [list(data[0].keys()), list(data[0].values())]
     dates = [datetime.date(datetime.strptime(date_string, '%m/%d/%y')) for date_string in raw[0]]
     cases = [int(n) for n in raw[1]]
 
@@ -35,15 +36,14 @@ def gen_chart(countries_name, date_range, database):
     db_name = get_db_name(database)
     fig = go.Figure()
     for country in countries_name:
-        data = requests.get(f"http://127.0.0.1:8000/{db_name}/{country}")
+        data = get_data(db_name, country)
         df = get_df(data, date_range)
         fig.add_trace(go.Scatter(x=df["Date"], y=df["Cases"], name=country, mode='lines'))
     fig.update_yaxes(tickfont=dict(size=AXIS_FONT_SIZE))
     fig.update_xaxes(tickfont=dict(size=AXIS_FONT_SIZE))
-    fig.update_layout(title=f"Numero total de {database.lower()} entre {date_range[0]} y {date_range[1]}",
+    fig.update_layout(title=f"Total number of {database.lower()} between {date_range[0]} and {date_range[1]}",
         xaxis_title="Date",
         yaxis_title=f"{database}",
         legend_title="Countries:",
-        font=dict(size=AXIS_FONT_SIZE)
-        )
+        font=dict(size=AXIS_FONT_SIZE))
     return fig
