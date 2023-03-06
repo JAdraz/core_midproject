@@ -14,6 +14,7 @@
 - [API](#API)
 - [Dashboard](#Dashboard)
 - [How To Use It](#How-To-Use-It)
+- [Credits](#Credits)
 
 
 ## Introduction
@@ -59,3 +60,7 @@ I created an API with its routers to extract data when it is neccesary.
 The dashboard was created using [Streamlit](https://streamlit.io) interface.
 
 ## How To Use It
+
+## Credits
+
+I have to thanks to my teachers Santino
