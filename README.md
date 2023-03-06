@@ -73,7 +73,13 @@ The dashboard was created using [Streamlit](https://streamlit.io) interface.
 
 ## How To Use It
 
+* Clone repository
+* Run API
 
+    ` uvicorn main:app `
+* Run Streamlit
+
+    ` streamlit run main.py `
 
 [Back to Table of Content](#table-of-content)
 
